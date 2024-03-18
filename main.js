@@ -175,6 +175,6 @@ const startGame = () => {
     document.getElementById('left').addEventListener('click', () => setDirection('ArrowLeft'));
     document.getElementById('right').addEventListener('click', () => setDirection('ArrowRight'));
 }
-
+ 
 
 startButton.addEventListener('click', startGame);
