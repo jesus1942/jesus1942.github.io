@@ -90,6 +90,20 @@ const gameOver = () => {
     startButton.disabled = false;
 }
 
+
+    //Obtener el nombre del jugador en la entrada de campo
+    // const playerNameInput = document.getElementById('payerName');
+    // const playerName = playerNameInput.ariaValueMax.trim();
+
+    // if (!playerName) {
+    //     alert('El nombre no puede estar vacío!');
+    //     return;
+    // }
+
+//Almacenar el nombre del jugador y su puntuación
+
+
+
 const setDirection = newDirection => {
     direction = newDirection;
 }
@@ -153,6 +167,14 @@ const startGame = () => {
     createRandomFood();
     document.addEventListener('keydown', directionalEvent);
     moveInterval = setInterval( () => moveSnake(), gameSpeed);
+
+
+
+    document.getElementById('up').addEventListener('click', () => setDirection('ArrowUp'));
+    document.getElementById('down').addEventListener('click', () => setDirection('ArrowDown'));
+    document.getElementById('left').addEventListener('click', () => setDirection('ArrowLeft'));
+    document.getElementById('right').addEventListener('click', () => setDirection('ArrowRight'));
 }
+
 
 startButton.addEventListener('click', startGame);
